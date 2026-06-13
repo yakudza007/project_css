@@ -1,0 +1,459 @@
+/* ===== RESET ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; color: #666; line-height: 1.7; background: #fff; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+
+/* ===== CONTAINER ===== */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.btn-primary  { background: #7ebce6; color: #fff; border-color: #7ebce6; }
+.btn-primary:hover { background: #5aaad8; border-color: #5aaad8; }
+.btn-outline  { background: #7ebce6; color: #fff; border-color: #7ebce6; }
+.btn-outline:hover { background: #5aaad8; }
+.btn-outline-dark { background: transparent; border-color: #ccc; color: #888; }
+.btn-outline-dark:hover { border-color: #7ebce6; color: #7ebce6; }
+.btn-white    { background: #fff; color: #7ebce6; border-color: #fff; }
+.btn-white:hover { background: #f0f4ff; }
+
+/* ===== LABEL ===== */
+.label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #e8a045;
+  margin-bottom: 12px;
+}
+.label.center { text-align: center; }
+.label.light  { color: #7ebce6; }
+
+/* ===== NAVBAR ===== */
+.header { background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+
+/* NAV: logo chap, links o'ng */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+.nav-logo { font-size: 1.05rem; font-weight: 900; color: #222; }
+.nav-logo span { color: #7ebce6; }
+
+/* links gorizontal qatorda */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+.nav-links li a { font-size: 0.82rem; font-weight: 500; color: #444; transition: color 0.2s; }
+.nav-links li a:hover, .nav-links li a.active { color: #111; font-weight: 700; }
+
+/* ===== HERO ===== */
+.hero { background: linear-gradient(160deg, #2b3d52 0%, #1b2e44 100%); padding: 90px 0 70px; }
+
+/* matn chap, rasm o'ng — flex row */
+.hero-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.hero-text { flex: 1; max-width: 510px; }
+.hero-text h1 { font-size: 2.5rem; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 18px; }
+.hero-text p  { font-size: 0.93rem; color: rgba(255,255,255,0.68); margin-bottom: 30px; line-height: 1.8; }
+
+/* domain narxlar: flex row, wrap */
+.domain-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.domain-row span {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 3px;
+  padding: 6px 14px;
+  font-size: 0.79rem;
+  color: rgba(255,255,255,0.55);
+}
+.domain-row span strong { color: #fff; }
+
+/* rasm o'ng tomonda markazda */
+.hero-img { flex: 1; display: flex; justify-content: center; align-items: center; }
+.hero-img img { width: 100%; max-width: 440px; }
+
+/* ===== SERVICES ===== */
+.services { background: #fff; padding: 80px 0; }
+
+/* label+h2 chap, tugma o'ng — flex row, pastki tomondan hizalanish */
+.services-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 48px;
+}
+.services-top-left { flex: 1; max-width: 700px; }
+.services-top-left h2 { font-size: 1.45rem; font-weight: 800; color: #1a1a2e; line-height: 1.4; }
+.services-top-right { flex-shrink: 0; }
+
+/* 4 ta karta bitta qatorda teng kenglikda — flex row, nowrap */
+.services-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: stretch;
+}
+.service-card {
+  flex: 1;
+  background: #f7faff;
+  border: 1px solid #e2ecf8;
+  border-radius: 4px;
+  padding: 28px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+.service-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.1); transform: translateY(-5px); }
+.service-card img { width: 70px; height: 70px; object-fit: contain; margin-bottom: 6px; }
+
+/* img ostidagi sariq chiziq */
+.service-card .line { width: 38px; height: 3px; background: #e8a045; margin-bottom: 16px; }
+
+.service-card h3 { font-size: 1rem; font-weight: 700; color: #222; margin-bottom: 12px; }
+.service-card p  { font-size: 0.83rem; color: #888; line-height: 1.7; flex: 1; margin-bottom: 16px; }
+.card-link { font-size: 0.77rem; font-weight: 700; color: #7ebce6; text-transform: uppercase; letter-spacing: 0.07em; }
+.card-link:hover { color: #5aaad8; }
+
+/* ===== FEATURES ===== */
+.features { background: #eef2f8; padding: 80px 0; }
+
+/* YUQORI: matn chap, katta rasm o'ng — flex row */
+.features-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  margin-top: 14px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #d8e2ef;
+  margin-bottom: 40px;
+}
+.features-left { flex: 1; max-width: 460px; }
+.features-left h2 { font-size: 1.8rem; font-weight: 800; color: #1a1a2e; line-height: 1.25; margin-bottom: 16px; }
+.features-left p  { font-size: 0.9rem; color: #777; line-height: 1.75; }
+.features-right { flex: 1; display: flex; justify-content: center; }
+.features-right img { width: 100%; max-width: 500px; }
+
+/* PASTKI: 6 ta item — 3 ustun x 2 qator
+   flex-direction: row, flex-wrap: wrap
+   har item: calc(33.333% - gap) */
+.features-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.feature-item {
+  flex: 0 0 calc(33.333% - 12px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #dce7f5;
+  border-radius: 4px;
+  padding: 16px 18px;
+}
+.feature-item img  { width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
+.feature-item span { font-size: 0.85rem; color: #555; line-height: 1.5; }
+
+/* ===== PRICING ===== */
+.pricing { background: #2b3d52; padding: 80px 0; text-align: center; }
+.pricing .label { color: rgba(255,255,255,0.38); letter-spacing: 0.28em; margin-bottom: 10px; }
+.pricing h2 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 50px; }
+
+/* 3 karta yonma-yon, teng balandlikda, chegarasiz (0 gap) */
+.pricing-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.price-card {
+  flex: 1;
+  background: #354e67;
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.price-card:first-child { border-radius: 4px 0 0 4px; }
+.price-card:last-child  { border-radius: 0 4px 4px 0; }
+.price-card.featured    { background: #7ebce6; border-color: #7ebce6; }
+
+.price-card h4 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 14px;
+}
+.price-card.featured h4 { color: rgba(255,255,255,0.85); }
+
+.price { font-size: 2.8rem; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 28px; }
+.price span { font-size: 0.88rem; font-weight: 400; color: rgba(255,255,255,0.5); }
+
+/* feature list vertikal, tekis chiziq bilan ajratilgan */
+.price-card ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  flex: 1;
+  margin-bottom: 28px;
+}
+.price-card ul li {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.65);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.price-card ul li::before { content: '✓  '; color: rgba(255,255,255,0.38); font-weight: 700; }
+
+/* tugma kenglik 100% */
+.price-card .btn { width: 100%; text-align: center; padding: 13px; display: block; }
+.price-card .btn-outline-dark { border-color: rgba(255,255,255,0.22); color: rgba(255,255,255,0.6); }
+.price-card .btn-outline-dark:hover { border-color: #fff; color: #fff; }
+.price-card.featured .btn-primary { background: #fff; color: #7ebce6; border-color: #fff; }
+.price-card.featured .btn-primary:hover { background: #f0f4ff; }
+
+/* ===== FILE MANAGEMENT ===== */
+.filemanage { background: #fff; padding: 80px 0; }
+
+/* matn chap, rasm o'ng */
+.filemanage-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.filemanage-left { flex: 1; max-width: 480px; }
+.filemanage-left h2 { font-size: 1.7rem; font-weight: 700; color: #222; line-height: 1.3; margin-bottom: 28px; }
+
+/* har fm-item: ikonka + matn yonma-yon */
+.filemanage-items { display: flex; flex-direction: column; gap: 22px; margin-bottom: 30px; }
+.fm-item { display: flex; flex-direction: row; align-items: flex-start; gap: 16px; }
+.fm-item img { width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; margin-top: 3px; }
+.fm-item h5  { font-size: 0.92rem; font-weight: 700; color: #333; margin-bottom: 5px; }
+.fm-item p   { font-size: 0.83rem; color: #888; line-height: 1.65; }
+
+.filemanage-right { flex: 1; display: flex; justify-content: center; }
+.filemanage-right img { width: 100%; max-width: 400px; }
+
+/* ===== CTA ===== */
+.cta { background: linear-gradient(135deg, #7ebce6 0%, #4aa5d8 100%); padding: 80px 0; }
+
+/* matn chap, rasm o'ng */
+.cta-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.cta-text { flex: 1; max-width: 540px; }
+.cta-text h2 { font-size: 1.9rem; font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 14px; }
+.cta-text p  { font-size: 0.91rem; color: rgba(255,255,255,0.82); line-height: 1.78; margin-bottom: 28px; }
+.cta-img { flex: 1; display: flex; justify-content: center; }
+.cta-img img { width: 100%; max-width: 340px; }
+
+/* ===== SETUP ===== */
+.setup { background: #f5f8fc; padding: 80px 0; }
+
+/* matn chap, grid o'ng */
+.setup-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
+}
+.setup-left { flex: 1; max-width: 430px; }
+.setup-left h2 { font-size: 1.7rem; font-weight: 700; color: #222; line-height: 1.3; margin-bottom: 12px; }
+.setup-left > p { font-size: 0.9rem; color: #888; line-height: 1.78; margin-bottom: 20px; }
+
+.setup-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.setup-list li { font-size: 0.9rem; color: #666; padding-left: 18px; position: relative; }
+.setup-list li::before { content: '✓'; position: absolute; left: 0; color: #7ebce6; font-weight: 700; }
+
+.setup-right { flex: 1; }
+
+/* 3 ustun x 2 qator */
+.apps-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.app-box {
+  flex: 0 0 calc(33.333% - 10px);
+  background: #fff;
+  border: 1px solid #e2ecf8;
+  border-radius: 4px;
+  padding: 20px 12px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: default;
+}
+.app-box:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); transform: translateY(-3px); }
+.app-icon {
+  width: 50px; height: 50px; border-radius: 50%;
+  margin: 0 auto 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 900; color: #fff;
+}
+.app-icon.wp      { background: #21759b; }
+.app-icon.joomla  { background: #f4a236; }
+.app-icon.drupal  { background: #0076b4; }
+.app-icon.magento { background: #ee672f; }
+.app-icon.php     { background: #8892bf; }
+.app-icon.mysql   { background: #e48e00; }
+.app-box span { display: block; font-size: 0.7rem; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials { background: linear-gradient(160deg, #2b3d52 0%, #1b2e44 100%); padding: 80px 0; }
+.testimonials h2 { font-size: 1.9rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 44px; }
+
+/* 3 karta yonma-yon, teng balandlikda */
+.testi-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 22px;
+}
+.testi-card {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testi-card > p { font-size: 0.87rem; color: rgba(255,255,255,0.7); line-height: 1.75; font-style: italic; flex: 1; }
+
+/* avatar + ism yonma-yon */
+.testi-author { display: flex; flex-direction: row; align-items: center; gap: 12px; }
+.avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: #7ebce6; color: #fff;
+  font-size: 0.78rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.testi-author strong { display: block; font-size: 0.87rem; color: #fff; }
+.testi-author span   { display: block; font-size: 0.73rem; color: rgba(255,255,255,0.42); }
+
+/* ===== GUARANTEE ===== */
+.guarantee { background: #fff; padding: 80px 0; }
+.guarantee .label { margin-bottom: 44px; }
+
+/* 3 ustun yonma-yon, o'rtada vertikal chiziq */
+.guarantee-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+}
+.guarantee-card {
+  flex: 1;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  border-right: 1px solid #e8e8e8;
+}
+.guarantee-card:first-child { padding-left: 0; }
+.guarantee-card:last-child  { padding-right: 0; border-right: none; }
+.guarantee-card h3 { font-size: 1.05rem; font-weight: 700; color: #222; line-height: 1.35; }
+.guarantee-card p  { font-size: 0.85rem; color: #888; line-height: 1.7; }
+.guarantee-card .btn { padding: 11px 22px; font-size: 0.76rem; }
+
+/* ===== FOOTER ===== */
+.footer { background: #1e2c3a; padding: 28px 0; text-align: center; }
+.footer-links { display: flex; flex-direction: row; justify-content: center; gap: 18px; margin-bottom: 10px; }
+.footer-links li a { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.38); text-transform: uppercase; letter-spacing: 0.07em; transition: color 0.2s; }
+.footer-links li a:hover { color: #7ebce6; }
+.footer-copy { font-size: 0.74rem; color: rgba(255,255,255,0.22); }
+.footer-copy a { color: rgba(255,255,255,0.35); }
+.footer-copy a:hover { color: #7ebce6; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 920px) {
+  .hero-inner,
+  .features-inner,
+  .filemanage-inner,
+  .cta-inner,
+  .setup-inner       { flex-direction: column; gap: 36px; }
+
+  /* services: 2 karta qatorda */
+  .services-grid     { flex-wrap: wrap; }
+  .service-card      { flex: 0 0 calc(50% - 10px); }
+
+  /* features items: 2 ustun */
+  .feature-item      { flex: 0 0 calc(50% - 10px); }
+
+  .pricing-grid      { flex-direction: column; max-width: 380px; gap: 16px; }
+  .price-card,
+  .price-card:first-child,
+  .price-card:last-child { border-radius: 4px; }
+
+  .testi-grid        { flex-direction: column; }
+
+  .guarantee-grid    { flex-direction: column; gap: 24px; }
+  .guarantee-card    { padding: 0 0 24px 0 !important; border-right: none; border-bottom: 1px solid #eee; }
+  .guarantee-card:last-child { border-bottom: none; padding-bottom: 0 !important; }
+
+  .nav-links         { display: none; }
+}
+
+@media (max-width: 560px) {
+  .container         { padding: 0 16px; }
+  .hero-text h1      { font-size: 1.9rem; }
+  .service-card      { flex: 0 0 100%; }
+  .feature-item      { flex: 0 0 100%; }
+  .app-box           { flex: 0 0 calc(50% - 8px); }
+}
